@@ -1,7 +1,7 @@
 class CLI
 
   def start
-    puts "Welcome!"
+    puts "Welcome to the Studio Ghibli Library!"
     API.ghibli_library
   end
 
