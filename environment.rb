@@ -3,5 +3,5 @@ require_relative "./lib/cli.rb"
 require_relative "./lib/movie.rb"
 
 require 'pry'
-require 'net-http'
+require 'net/http'
 require 'json'
