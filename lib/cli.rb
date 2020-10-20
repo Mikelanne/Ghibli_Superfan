@@ -13,13 +13,23 @@ class CLI
 
     if user_input == "yes"
       display_movie_list
+      ask_user_for_movie_choice
     end
   end
 
   def display_movie_list
-    Movie.all.each do |movie|
-      puts movie.title
+    Movie.all.each.with_index(1) do |movie, index|
+      puts "#{index}. #{movie.title}"
     end
+  end
+
+  def ask_user_for_movie_choice
+    puts "Which movie would you like to explore more?"
+    puts "Type the number correlated with your movie choice!"
+    user_index = gets.strip.to_i - 1
+    #you are going to need to establish if your user input is valid
+    movie_instance = Movie.all[user_index]
+    binding.pry
   end
 
     #if the user says Hayao Miyazaki
