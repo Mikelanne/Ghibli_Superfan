@@ -17,11 +17,19 @@ class CLI
     user_input = gets.strip.downcase
 
     #if the user says Hayao Miyazaki
-    if user_input == "Hayao Miyazaki" || "Hayao"
-      puts "The man, the myth, the legend! Let's take a look at his movies."
+      if user_input == "Hayao Miyazaki" || "Hayao"
+        puts "The man, the myth, the legend! Let's take a look at his movies."
       #now we need to iterate through all the movies, to find the director, and return his movies.
+        display_Hayao_Movies
+      end
     end
 
+    def display_Hayao_Movies
+      Movie.all.each do |movie|
+        if movie.director == "Hayao Miyazaki"
+          puts movie.title
+        end
+      end 
     end
 
 end
