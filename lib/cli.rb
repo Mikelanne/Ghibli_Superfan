@@ -6,41 +6,48 @@ class CLI
     self.menu
   end
 
-  #I want my user to input the name of a director, and I want my app to return a list of titles by that director.
-  #Then from that list of titles, the user can get a description and a rt score.
-  #is this even possible? Lets find out.
-
   def menu
-    #give user the option to see the directors
-    puts "Which iconic director would you like explore today?"
-    puts "Type the name of the director or any key to exit."
+    puts "Would you like to see a list of Studio Ghibli movies?"
+    puts "Type 'yes' or any key to exit."
     user_input = gets.strip.downcase
 
+    if user_input == "yes"
+      display_movie_list
+    end
+  end
+
+  def display_movie_list
+    Movie.all.each do |movie|
+      puts movie.title
+    end
+  end
+
     #if the user says Hayao Miyazaki
-      if user_input = "Hayao Miyazaki" || "Hayao"
-        puts "The man, the myth, the legend! Let's take a look at his films."
-      #now we need to iterate through all the movies, to find the director, and return his movies.
-        display_Hayao_movies
-      elsif user_input = "Gorō Miyazaki" || "Goro Miyazaki"
-        puts "Let's take a look at Goro's films!"
-        display_Goro_movies
-      end
-    end
-
-    def display_Hayao_movies
-      Movie.all.each do |movie|
-        if movie.director == "Hayao Miyazaki"
-          puts movie.title
-        end
-      end
-    end
-
-    def display_Goro_movies
-      Movie.all.each do |movie|
-        if movie.director == "Gorō Miyazaki"
-          puts movie.title
-        end
-      end
-    end
+    #   if user_input == "Hayao Miyazaki" || "Hayao"
+    #     puts "The man, the myth, the legend! Let's take a look at his films."
+    #   #now we need to iterate through all the movies, to find the director, and return his movies.
+    #     display_Hayao_movies
+    #   end
+    #   if user_input = "Gorō Miyazaki" || "Goro Miyazaki"
+    #     puts "Let's take a look at Goro's films!"
+    #     display_Goro_movies
+    #   end
+    # end
+    #
+    # def display_Hayao_movies
+    #   Movie.all.each do |movie|
+    #     if movie.director == "Hayao Miyazaki"
+    #       puts movie.title
+    #     end
+    #   end
+    # end
+    #
+    # def display_Goro_movies
+    #   Movie.all.each do |movie|
+    #     if movie.director == "Gorō Miyazaki"
+    #       puts movie.title
+    #     end
+    #   end
+    # end
 
 end
