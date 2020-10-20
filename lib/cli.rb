@@ -20,16 +20,16 @@ class CLI
       if user_input == "Hayao Miyazaki" || "Hayao"
         puts "The man, the myth, the legend! Let's take a look at his movies."
       #now we need to iterate through all the movies, to find the director, and return his movies.
-        display_Hayao_Movies
+        display_Hayao_movies
       end
     end
 
-    def display_Hayao_Movies
+    def display_Hayao_movies
       Movie.all.each do |movie|
         if movie.director == "Hayao Miyazaki"
           puts movie.title
         end
-      end 
+      end
     end
 
 end
