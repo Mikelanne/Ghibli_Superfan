@@ -32,6 +32,7 @@ class CLI
   end
 
   def ask_user_for_movie_choice
+    puts "\n"
     puts "Which movie would you like to explore more?"
     puts "Type the number correlated with your movie choice!"
     puts "\n"
