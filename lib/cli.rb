@@ -27,11 +27,20 @@ class CLI
     puts "Which movie would you like to explore more?"
     puts "Type the number correlated with your movie choice!"
     user_index = gets.strip.to_i - 1
-    #you are going to need to establish if your user input is valid
+    until user_index.between?(0, Movie.all.length - 1)
+      puts "Sorry, there's no movie correlated with that number! Please enter a valid number."
+      user_index = gets.strip.to_i - 1
+    end
     movie_instance = Movie.all[user_index]
-    binding.pry
+
+    display_movie_details(movie_instance)
   end
 
+  def display_movie_details(movie)
+    puts "Great choice! #{movie.title} is one of the best!"
+    puts "#{movie.title} was released in #{movie.release_date}."
+    puts "The director is #{movie.director}."
+  end
     #if the user says Hayao Miyazaki
     #   if user_input == "Hayao Miyazaki" || "Hayao"
     #     puts "The man, the myth, the legend! Let's take a look at his films."

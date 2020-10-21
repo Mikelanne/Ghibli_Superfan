@@ -11,6 +11,7 @@ class API
         movie.description = movie_hash["description"]
         movie.director = movie_hash["director"]
         movie.rt_score = movie_hash["rt_score"]
+        movie.release_date = movie_hash["release_date"]
       end
   end
 end

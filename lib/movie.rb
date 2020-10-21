@@ -1,5 +1,5 @@
 class Movie
-  attr_accessor :title, :description, :director, :rt_score
+  attr_accessor :title, :description, :director, :rt_score, :release_date
 
   @@all = []
 
@@ -9,6 +9,6 @@ class Movie
 
   def self.all
     @@all
-  end 
+  end
 
 end
