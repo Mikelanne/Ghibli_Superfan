@@ -10,10 +10,14 @@ class CLI
     puts "Would you like to see a list of Studio Ghibli movies?"
     puts "Type 'yes' or any key to exit."
     user_input = gets.strip.downcase
+    puts "\n"
 
     if user_input == "yes"
       display_movie_list
       ask_user_for_movie_choice
+
+      sleep(3)
+      puts "\n"
 
       menu
     else
@@ -30,6 +34,7 @@ class CLI
   def ask_user_for_movie_choice
     puts "Which movie would you like to explore more?"
     puts "Type the number correlated with your movie choice!"
+    puts "\n"
     user_index = gets.strip.to_i - 1
     until user_index.between?(0, Movie.all.length - 1)
       puts "Sorry, there's no movie correlated with that number! Please enter a valid number."
