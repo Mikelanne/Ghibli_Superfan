@@ -5,3 +5,4 @@ require_relative "./lib/movie.rb"
 require 'pry'
 require 'net/http'
 require 'json'
+require 'awesome_print'
