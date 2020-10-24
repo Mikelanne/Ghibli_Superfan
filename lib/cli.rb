@@ -114,6 +114,12 @@ end
               puts movie.title
           end
         end
-   end
+        puts "Lets list the movies by release year!"
+        display_movie_by_year
+      end
+
+      def display_movie_by_year
+        binding.pry 
+      end
 
 end
