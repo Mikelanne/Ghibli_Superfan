@@ -19,16 +19,19 @@ class CLI
       #I want to add the option to organize the movies - could do this alphabetically or
       #by year or something like that.
       #Maybe this is where I can do it by director?!?!!? ooooo!!!!
-
-      display_movie_by_director
-
       sleep(3)
       puts "\n"
 
-      menu
+      # menu
     else
       puts "Goodbye! Enjoy your Ghibli adventure!"
     end
+    puts "Would you like to see the movies listed by their director?"
+    puts "Type 'yes' or any key to exit."
+    user_input = gets.strip.downcase
+    if user_input == "yes"
+
+    display_movie_by_director
   end
 
   def display_movie_list
@@ -61,12 +64,18 @@ class CLI
   end
 
   def display_movie_by_director
-    binding.pry
-    Movie.all.collect do |movie|
+      puts "Great! Here are all the movies directed by Hayao Miyazaki:"
+      Movie.all.find_all do |movie|
         if movie.director == "Hayao Miyazaki"
-        # puts "Hayao Miyazaki directed the following movies:"
-        puts movie.title.to_a
+          puts movie.title
+        end
+      end
+    end
+      puts "Here are all the movies directed by Goro Miyazaki:"
+      Movie.all.find_all do |movie|
+        if movie.director == "Goro Miyazaki"
+          puts movie.title
+        end
       end
     end
   end
-end
