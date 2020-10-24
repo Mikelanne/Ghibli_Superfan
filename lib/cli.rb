@@ -114,12 +114,17 @@ end
               puts movie.title
           end
         end
-        puts "Lets list the movies by release year!"
+        puts "Lets list the movies by the year they were released!"
         display_movie_by_year
       end
 
       def display_movie_by_year
-        binding.pry 
+        Movie.all.each do |movie, year|
+          puts "#{movie.title} - #{movie.release_date}"
+        end
       end
 
+      #the API is already listed by movie year, so I'm not really doing anything
+      #differently here. Check at the next office hours if this should just
+      #be removed.
 end
