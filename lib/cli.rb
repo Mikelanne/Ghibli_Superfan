@@ -19,19 +19,13 @@ class CLI
       #I want to add the option to organize the movies - could do this alphabetically or
       #by year or something like that.
       #Maybe this is where I can do it by director?!?!!? ooooo!!!!
-      sleep(3)
+      sleep(1)
       puts "\n"
 
       menu
     else
       puts "Goodbye! Enjoy your Ghibli adventure!"
     end
-    # puts "Would you like to see the movies listed by their director?"
-    # puts "Type 'yes' or any key to exit."
-    # user_input = gets.strip.downcase
-    # if user_input == "yes"
-    #
-    # display_movie_by_director
   end
 
   def display_movie_list
@@ -68,6 +62,7 @@ class CLI
     puts "Type yes or any key to return to the main menu."
     user_input = gets.strip.downcase
       if user_input == "yes"
+        puts "\n"
         display_movies_by_director
   end
 end
@@ -79,6 +74,7 @@ end
           puts movie.title
         end
      end
+
      puts "\n"
      puts "Gorō Miyazaki directed the following films:"
        Movie.all.each do |movie|
@@ -87,6 +83,37 @@ end
          end
       end
 
+      puts "\n"
+      puts "Yoshifumi Kondō directed the following films:"
+        Movie.all.each do |movie|
+          if movie.director == "Yoshifumi Kondō"
+            puts movie.title
+          end
+       end
+
+      puts "\n"
+      puts "Isao Takahata directed the following films:"
+        Movie.all.each do |movie|
+          if movie.director == "Isao Takahata"
+            puts movie.title
+          end
+      end
+
+      puts "\n"
+      puts "Hiroyuki Morita directed the following films:"
+        Movie.all.each do |movie|
+          if movie.director == "Hiroyuki Morita"
+            puts movie.title
+          end
+        end
+
+        puts "\n"
+        puts "Hiromasa Yonebayashi directed the following films:"
+          Movie.all.each do |movie|
+            if movie.director == "Hiromasa Yonebayashi"
+              puts movie.title
+          end
+        end
    end
 
 end
