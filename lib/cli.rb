@@ -15,6 +15,7 @@ class CLI
     if user_input == "yes"
       display_movie_list
       ask_user_for_movie_choice
+      display_movie_by_director
       puts "\n"
       #I want to add the option to organize the movies - could do this alphabetically or
       #by year or something like that.
@@ -22,16 +23,16 @@ class CLI
       sleep(3)
       puts "\n"
 
-      # menu
+      menu
     else
       puts "Goodbye! Enjoy your Ghibli adventure!"
     end
-    puts "Would you like to see the movies listed by their director?"
-    puts "Type 'yes' or any key to exit."
-    user_input = gets.strip.downcase
-    if user_input == "yes"
-
-    display_movie_by_director
+    # puts "Would you like to see the movies listed by their director?"
+    # puts "Type 'yes' or any key to exit."
+    # user_input = gets.strip.downcase
+    # if user_input == "yes"
+    #
+    # display_movie_by_director
   end
 
   def display_movie_list
@@ -72,10 +73,9 @@ class CLI
       end
     end
       puts "Here are all the movies directed by Goro Miyazaki:"
-      Movie.all.find_all do |movie|
+        Movie.all.find_all do |movie|
         if movie.director == "Goro Miyazaki"
           puts movie.title
         end
       end
     end
-  end
