@@ -18,3 +18,7 @@ Simply respond to the prompts given by the app!
 Would you like to see a list of Studio Ghibli movies?
 Type "yes" or any key to exit.
 ```
+
+Find all the information you need to choose your next Ghibli adventure!
+
+https://imgur.com/gallery/XGEEOnV
