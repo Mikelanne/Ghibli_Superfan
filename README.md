@@ -21,4 +21,4 @@ Type "yes" or any key to exit.
 
 Find all the information you need to choose your next Ghibli adventure!
 
-https://imgur.com/gallery/XGEEOnV
+<blockquote class="imgur-embed-pub" lang="en" data-id="XGEEOnV"  ><a href="//imgur.com/XGEEOnV">Cat bus! :D</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
