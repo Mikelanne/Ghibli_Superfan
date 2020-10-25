@@ -114,13 +114,20 @@ end
               puts movie.title
           end
         end
-        puts "Lets list the movies by the year they were released!"
-        display_movie_by_year
+        puts "\n"
+        sleep(1)
+        puts "Would you like to see the movies organized by the year they were released?"
+        puts "Type yes to continue or any key to return to the main menu."
+        user_input = gets.strip.downcase
+          if user_input == "yes"
+            puts "\n"
+            display_movie_by_year
+          end
       end
 
       def display_movie_by_year
-        Movie.all.each do |movie, year|
-          puts "#{movie.title} - #{movie.release_date}"
+        Movie.all.each.with_index(1) do |movie, index|
+          puts "#{index}. #{movie.title}: #{movie.release_date}"
         end
       end
 
