@@ -19,6 +19,14 @@ Would you like to see a list of Studio Ghibli movies?
 Type "yes" or any key to exit.
 ```
 
-Find all the information you need to choose your next Ghibli adventure!
+## Contributing
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="XGEEOnV"  ><a href="//imgur.com/XGEEOnV">Cat bus! :D</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+Simple changes are welcome! Add a new class for heightened functionality.
+Add extra details about the world of Ghibli as you wish.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
+
+
+Find all the information you need to choose your next Ghibli adventure!
+(https://imgur.com/gallery/XGEEOnV)
