@@ -29,4 +29,3 @@ Add extra details about the world of Ghibli as you wish.
 
 
 Find all the information you need to choose your next Ghibli adventure!
-(https://imgur.com/gallery/XGEEOnV)
