@@ -28,4 +28,4 @@ Add extra details about the world of Ghibli as you wish.
 [MIT](https://choosealicense.com/licenses/mit/)
 
 
-Find all the information you need to choose your next Ghibli adventure!
+###### Find all the information you need to choose your next Ghibli adventure!
