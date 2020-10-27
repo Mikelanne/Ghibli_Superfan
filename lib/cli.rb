@@ -16,9 +16,6 @@ class CLI
       display_movie_list
       ask_user_for_movie_choice
       puts "\n"
-      #I want to add the option to organize the movies - could do this alphabetically or
-      #by year or something like that.
-      #Maybe this is where I can do it by director?!?!!? ooooo!!!!
       sleep(1)
       puts "\n"
 
@@ -116,24 +113,20 @@ end
         end
         puts "\n"
         sleep(1)
-        puts "Would you like to see the movies organized by the year they were released?"
+        puts "Would you like to see the movies organized alphabetically?"
         puts "Type yes to continue or any key to return to the main menu."
         user_input = gets.strip.downcase
           if user_input == "yes"
             puts "\n"
-            display_movie_by_year
+            display_movies_alphabetically
           end
       end
 
-      def display_movie_by_year
-        Movie.all.each.with_index(1) do |movie, index|
-          puts "#{index}. #{movie.title}: #{movie.release_date}"
+      def display_movies_alphabetically
+        movie_array = []
+        Movie.all.map do |movie|
+          movie_array << movie.title
         end
-      end
-
-      #reverse or alpha.
-
-      #the API is already listed by movie year, so I'm not really doing anything
-      #differently here. Check at the next office hours if this should just
-      #be removed.
+        puts movie_array.sort
+      end 
 end

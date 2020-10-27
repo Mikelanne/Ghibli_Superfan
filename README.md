@@ -8,6 +8,7 @@ This app allows users to discover which movies their favorite director worked on
 Clone from GitHub using this link: git@github.com:Mikelanne/Ghibli_Superfan.git
 ```bash
 git clone git@github.com:Mikelanne/Ghibli_Superfan.git
+cd Ghibli_Superfan
 ```
 
 ## Usage
